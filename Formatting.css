@@ -1,9 +1,29 @@
-
+.workspace .markdown-preview-view{
+    padding-top: 23px;
+}
 
 /* > Header Tweaks */
 .HyperMD-header{
     padding-top: 1.2em !important;
 }
+h1, h2, h3, h4, h5, h6{
+    padding-top: 1.2em !important;
+    margin: 0 !important;
+    position:relative;
+}
+/* h1::before{
+    content:"h1";
+    position:absolute;
+    font-size:12px; 
+    bottom: 2.3em;
+    left: -20px;
+    color: var(--red);
+} */
+h1::before, h2::before, h3::before, h4::before, h5::before, h6::before{
+    content: "#";
+    color: var(--red);
+}
+
 .cm-formatting-header{
     color: var(--red) !important;
     filter: saturate(0.8);
@@ -11,9 +31,20 @@
 
 /* > Block/Line Tweaks */
 .mod-cm6 .cm-editor .cm-line{
-    padding-bottom: 0.3em;
-    padding-top: 0.3em;
+    /* padding-bottom: 0.3em; */
+    /* padding-top: 0.3em; */
 }
+p > * {
+    padding-bottom: 0.3em !important;
+    padding-top: 0.3em !important;
+}
+br{
+    line-height: 40px;
+    height: 40px;
+    padding-bottom: 0.3em !important;
+    padding-top: 0.3em !important;
+}
+
 
 /* > Adding Padding Every after Indent */
 .mod-cm6 .cm-editor .cm-line[style*="text-indent"] + div.cm-line:not([style*="text-indent"]):not(.HyperMD-quote){
@@ -26,8 +57,9 @@ h1, .markdown-rendered h1, .HyperMD-header-1, .HyperMD-list-line .cm-header-1{
 }
 
 /* > Indentation MARKINGS */
-.markdown-source-view.mod-cm6 .cm-indent::before{
-    margin-left: 6px;
+/* SOURCE CODE */
+/* .markdown-source-view.mod-cm6 .cm-indent::before{
+    margin-left: 2px;
     width: 4px;
     background-color: var(--indentation-guide);
     opacity: 0.4;
@@ -44,6 +76,14 @@ h1, .markdown-rendered h1, .HyperMD-header-1, .HyperMD-list-line .cm-header-1{
     border:none;
     top: 0;
     bottom: 0;
+} */
+
+/*  */
+.markdown-rendered.show-indentation-guide li.task-list-item>ol::before,
+.markdown-rendered.show-indentation-guide li.task-list-item>ul::before,
+.markdown-rendered.show-indentation-guide li>ol::before,
+.markdown-rendered.show-indentation-guide li>ul::before {
+    margin-left: -4px;
 }
 
 /* > LISTS */
@@ -71,16 +111,14 @@ h1, .markdown-rendered h1, .HyperMD-header-1, .HyperMD-list-line .cm-header-1{
 
 /* > Horizontal Line */
 .HyperMD-hr.HyperMD-hr-bg.cm-line{
-    text-align: center;
 }
 
 .HyperMD-hr.HyperMD-hr-bg.cm-line > span{
-    text-align: center;
     opacity: 0.3;
     font-weight: bold;
 }
 .HyperMD-hr.HyperMD-hr-bg.cm-line::after{
-    height: 4px;
+    height: 0px;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.068);
     display:block;
@@ -90,7 +128,7 @@ h1, .markdown-rendered h1, .HyperMD-header-1, .HyperMD-list-line .cm-header-1{
     top: 50%;
 }
 .HyperMD-hr.HyperMD-hr-bg.cm-line::before{
-    height: 4px;
+    height: 2px;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.068);
     display:block;
@@ -120,8 +158,30 @@ h1, .markdown-rendered h1, .HyperMD-header-1, .HyperMD-list-line .cm-header-1{
     font-size: 0.9em !important;
 }
 
-/* TODO: Code Fence Blocks */
-/* TODO: Highlights */
+/* > CODE BLOCK */
+.markdown-source-view.mod-cm6 .cm-content>.HyperMD-codeblock-begin-bg{
+    margin-top: 16px !important;
+    padding-top: 16px;
+}
+
+.markdown-source-view.mod-cm6 .cm-content>.HyperMD-codeblock-end-bg {
+    margin-bottom: 16px !important;
+}
+
+
+.cm-formatting-highlight{
+    /* color: rgba(0, 0, 0, 0.2) !important; */
+    opacity: 0.3;
+    font-weight: bold;
+    border-radius: 4px 0 0 4px;
+    background: none !important;
+}
+.cm-highlight + .cm-highlight:not(.cm-formatting-highlight){
+    border-radius: 4px;
+}
+
+/* > IMAGES */
+/* impossible to do */
+
 /* TODO: Subscripts */
-/* TODO: Superscripts */
 /* TODO: Superscripts */

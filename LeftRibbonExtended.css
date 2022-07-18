@@ -42,7 +42,6 @@
     flex-basis: 0px;
     padding: 8px 0 ;
     border-bottom: none;
-    z-index: 1000;
 }
 .workspace-split.mod-horizontal>*>.workspace-leaf-resize-handle::after{
     position:absolute;

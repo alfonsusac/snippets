@@ -1,0 +1,15 @@
+.nav-file-title-content {
+    display: flex;
+    align-items: center;
+}
+
+.nav-file-title-content::before {
+    background-image: url(https://api.iconify.design/mi:document-empty.svg?color=%23ffffff44);
+    margin-right: 4px;
+    background-position: center;
+    content: " ";
+    width: 16px;
+    height: 16px;
+    position: relative;
+    display: block;
+}
