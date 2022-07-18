@@ -1,0 +1,11 @@
+/* Change Titlebar to no border */
+.titlebar {
+    background-color: rgb(10, 10, 10) !important;
+    border-bottom: none !important;
+}
+
+/* FIxes some stuff */
+.titlebar-button {
+    display: flex;
+    align-items: center;
+}

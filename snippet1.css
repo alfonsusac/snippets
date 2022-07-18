@@ -1,41 +1,3 @@
-/* Make Document File Title Full Width */
-.view-header-title-container {
-    position: relative;
-}
-/* Make DocFileTitle more subtle */
-.view-header-title {
-    font-weight: 600;
-    opacity: 0.3;
-    font-size: calc(var(--title-size) * 0.7);
-    font-family: var(--font-monospace);
-}
-/* Adds .md at the end */
-.view-header-title::after {
-    content: ".md";
-}
-
-/* Make draggable icon a bit viewable */
-.view-header-icon {
-    opacity: 0.1;
-}
-
-/* Change Titlebar to no border */
-.titlebar {
-    background-color: rgb(10, 10, 10) !important;
-    border-bottom: none !important;
-}
-
-/* FIxes some stuff */
-.titlebar-button {
-    display: flex;
-    align-items: center;
-}
-
-/* enlarges H1 */
-.HyperMD-header-1 {
-    font-size: 2em !important;
-}
-
 .workspace {
     background-color: rgb(10, 10, 10) !important;
 }
@@ -179,4 +141,10 @@ body:not(.is-mobile)
 /* BLANK PAGE */
 .empty-state {
     background-color: unset;
+}
+
+
+/* enlarges H1 */
+.HyperMD-header-1 {
+    font-size: 2em !important;
 }

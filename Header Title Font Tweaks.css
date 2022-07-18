@@ -1,0 +1,11 @@
+/* Make DocFileTitle more subtle */
+.view-header-title {
+    font-weight: 600;
+    opacity: 0.3;
+    font-size: calc(var(--title-size) * 0.7);
+    font-family: var(--font-monospace);
+}
+/* Adds .md at the end */
+.view-header-title::after {
+    content: ".md";
+}

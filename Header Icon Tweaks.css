@@ -1,0 +1,4 @@
+/* Make draggable icon a bit viewable */
+.view-header-icon {
+    opacity: 0.1;
+}
