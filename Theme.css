@@ -1,13 +1,15 @@
 /* > GLOBAL VARIABLES */
-:root{
+:root *{
     /* Adds Blue Hue */
     --base-h: 210; 
-    
+
     /* A bit more saturation Blue Hue */
     --base-s: 20%; 
 
     /* ACCENTS: links etc */
     --accent-s: 50%;
+
+    --border-width-alt: 4px;
 
 }
 
@@ -22,8 +24,8 @@
     /*  */
     --bg2: hsl( 
         var(--base-h), 
-        calc(var(--base-s) + 50%), 
-        calc(var(--base-l) - 8%) );   /* Darker Secondary Color */
+        calc(var(--base-s) + 30%), 
+        calc(var(--base-l) - 6%) );   /* Darker Secondary Color */
 
     /*  */
     --bg3: hsla( 
@@ -31,4 +33,13 @@
         var(--base-s), 
         calc(var(--base-l) + 40%), 
         0.12 );
+
+    --background-divider: var(--bg2);
+}
+
+/* > Divider Colors */
+.workspace-split.mod-horizontal>*>.workspace-leaf-resize-handle:hover, .workspace-split.mod-left-split>.workspace-leaf-resize-handle:hover, .workspace-split.mod-right-split>.workspace-leaf-resize-handle:hover, .workspace-split.mod-vertical>*>.workspace-leaf-resize-handle:hover{
+    /* width: --border-width-alt; */
+    border-width: var(--border-width-alt);
+    border-color: hsla( var(--accent-h), var(--accent-s), var(--accent-l) , 0.6);
 }

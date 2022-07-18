@@ -1,0 +1,90 @@
+/* > Darken the Expanded Ribbon*/
+.workspace-split.mod-horizontal.mod-left-split{
+    background-color: var(--bg2);
+}
+
+.workspace-split.mod-horizontal.mod-left-split .workspace-tabs{
+    background-color: hsl( 
+        var(--base-h), 
+        calc(var(--base-s) + 100%), 
+        calc(var(--base-l) - 10%) );
+    border-radius: 8px 0 0 16px;
+}
+
+/* > Adds Highlight under Icon */
+.workspace-split .workspace-tab-header-container .is-active > div::after {
+    /* border-bottom: solid white 1px; */
+    width: 26px;
+    /* margin-left: 3px; */
+    position: absolute;
+    top: 33px;
+    height: 5px;
+    background-color: rgba(255, 255, 255, 0.158);
+    border-radius: 100px;
+    content: "";
+}
+
+/* Left RIbbon Expanded Horizontal Divider Tweak*/
+/* > Remove Border between tabs and content */
+.workspace-sidedock-empty-state
+    + .workspace-tabs
+    .workspace-tab-header-container {
+    border: none;
+}
+
+/* > DRAGGABLE HORIZONTAL Divider between Tabs */
+/* Left RIbbon Expanded Horizontal Divider Tweak*/
+.workspace-split.mod-horizontal>*>.workspace-leaf-resize-handle{
+    position:absolute;
+    bottom: -8px;
+    order: 2;
+    flex-grow: 0;
+    flex-basis: 0px;
+    padding: 8px 0 ;
+    border-bottom: none;
+    z-index: 1000;
+}
+.workspace-split.mod-horizontal>*>.workspace-leaf-resize-handle::after{
+    position:absolute;
+    background-color:var(--background-divider);
+    width: 100%;
+    content: " ";
+    height: 4px;
+    top: 30%;
+    transition: background-color 200ms;
+}
+.workspace-split.mod-horizontal>*>.workspace-leaf-resize-handle:hover::after{
+    background-color:hsla( var(--accent-h), var(--accent-s), var(--accent-l) , 0.6);
+}
+.workspace-split.mod-horizontal>*>.workspace-leaf-resize-handle:active::after{
+    background-color:var(--background-modifier-border-focus);
+}
+
+/* > Tweak Collapse Icon in BACKLINK */
+.tree-item-icon.collapse-icon {
+    display: unset !important;
+}
+.backlink-pane > .tree-item-self,
+.backlink-pane > .tree-item-self:hover,
+.outgoing-link-pane > .tree-item-self,
+.outgoing-link-pane > .tree-item-self {
+    padding-left: 24px;
+}
+
+
+/* > Header in VIEW CONTENT */
+/* Put it to bottom */
+.workspace-split.mod-horizontal.mod-left-split .workspace-leaf-content .nav-header {
+    order: 2;
+}
+
+.workspace-tabs .workspace-leaf{
+    /* outline: white 1px solid; */
+    padding-top: 4px;
+}
+
+/* > REMOVE GRADIENT */
+body:not(.is-translucent):not(.is-mobile) .mod-left-split .backlink-pane, body:not(.is-translucent):not(.is-mobile) .mod-left-split .item-list, body:not(.is-translucent):not(.is-mobile) .mod-left-split .nav-files-container, body:not(.is-translucent):not(.is-mobile) .mod-left-split .outgoing-link-pane, body:not(.is-translucent):not(.is-mobile) .mod-left-split .tag-container, body:not(.is-translucent):not(.is-mobile) .mod-left-split .workspace-leaf-content[data-type=search] .search-result-container{
+    padding-top: 8px;
+    background: none;
+}
