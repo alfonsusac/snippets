@@ -1,0 +1,20 @@
+/* > SIZE VARIABLES */
+:root{
+    --h1: 2.4em;
+    --h2: 1.6em;
+    --h3: 1.4em;
+
+    --h1-weight: 500;
+    --h2-weight: 500;
+    --h3-weight: 500;
+    --h4-weight: 600;
+
+    --line-height: 1.6;
+}
+
+
+
+/* > FAMILY VARIABLES */
+body{
+    --font-text-override: "Outfit";
+}

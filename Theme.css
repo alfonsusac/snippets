@@ -1,11 +1,14 @@
-
 /* > GLOBAL VARIABLES */
 :root{
     /* Adds Blue Hue */
-    --base-h: 212; 
+    --base-h: 210; 
     
     /* A bit more saturation Blue Hue */
-    --base-s: 25%; 
+    --base-s: 20%; 
+
+    /* ACCENTS: links etc */
+    --accent-s: 50%;
+
 }
 
 /* > THEME VARIABLES */

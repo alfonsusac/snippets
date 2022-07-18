@@ -1,0 +1,127 @@
+
+
+/* > Header Tweaks */
+.HyperMD-header{
+    padding-top: 1.2em !important;
+}
+.cm-formatting-header{
+    color: var(--red) !important;
+    filter: saturate(0.8);
+}
+
+/* > Block/Line Tweaks */
+.mod-cm6 .cm-editor .cm-line{
+    padding-bottom: 0.3em;
+    padding-top: 0.3em;
+}
+
+/* > Adding Padding Every after Indent */
+.mod-cm6 .cm-editor .cm-line[style*="text-indent"] + div.cm-line:not([style*="text-indent"]):not(.HyperMD-quote){
+    padding-top: 0.8em;
+}
+
+/* > H1 */
+h1, .markdown-rendered h1, .HyperMD-header-1, .HyperMD-list-line .cm-header-1{
+    font-family: 'Roboto Slab', serif !important;
+}
+
+/* > Indentation MARKINGS */
+.markdown-source-view.mod-cm6 .cm-indent::before{
+    margin-left: 6px;
+    width: 4px;
+    background-color: var(--indentation-guide);
+    opacity: 0.4;
+    border:none;
+    transition: top 200ms, bottom 200ms;
+    top: 0.2em;
+    bottom: 0.2em;
+}
+.markdown-source-view.mod-cm6 .cm-indent.cm-active-indent::before{
+    margin-left: 6px;
+    width: 4px;
+    background-color: var(--indentation-guide);
+    opacity: 1;
+    border:none;
+    top: 0;
+    bottom: 0;
+}
+
+/* > LISTS */
+.markdown-source-view.mod-cm6 .cm-formatting-list-ul, .markdown-source-view.mod-cm6 .cm-formatting-list-ol{
+    margin-left: -4px;
+    margin-right: 8px;
+}
+
+/* > FORMATTINGS */
+.cm-formatting-em{
+    opacity: 0.3;
+}
+.cm-formatting-strong{
+    opacity: 0.3;
+}
+
+/* > BLOCKQUOTE */
+/* First BlockQuote */
+*:not(.markdown-source-view.mod-cm6 .HyperMD-quote) + .HyperMD-quote{
+    padding-top:0.5em;
+}
+.cm-contentContainer > .cm-content > .HyperMD-quote{
+    padding-left: 1em;
+}
+
+/* > Horizontal Line */
+.HyperMD-hr.HyperMD-hr-bg.cm-line{
+    text-align: center;
+}
+
+.HyperMD-hr.HyperMD-hr-bg.cm-line > span{
+    text-align: center;
+    opacity: 0.3;
+    font-weight: bold;
+}
+.HyperMD-hr.HyperMD-hr-bg.cm-line::after{
+    height: 4px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.068);
+    display:block;
+    content:" ";
+    position:absolute;
+    pointer-events: none;
+    top: 50%;
+}
+.HyperMD-hr.HyperMD-hr-bg.cm-line::before{
+    height: 4px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.068);
+    display:block;
+    content:" ";
+    position:absolute;
+    pointer-events: none;
+    bottom: 50%;
+}
+
+/* > LINKS */
+
+.cm-link{
+    color: rgb(94, 43, 235) ;
+}
+/* The Underline */
+.cm-formatting-link-string + .cm-url{
+    border-bottom: solid 2px hsla( var(--accent-h), var(--accent-s), var(--accent-l) , 0.4);
+}
+
+.cm-formatting-link-string + .cm-url:hover{
+    border-bottom: solid 2px hsla( var(--accent-h), var(--accent-s), var(--accent-l) , 0.6);
+}
+
+/* > TASKLIST */
+.cm-formatting.cm-formatting-task{
+    font-family: var(--font-monospace) !important;
+    font-size: 0.9em !important;
+}
+
+/* TODO: Code Fence Blocks */
+/* TODO: Highlights */
+/* TODO: Subscripts */
+/* TODO: Superscripts */
+/* TODO: Superscripts */
