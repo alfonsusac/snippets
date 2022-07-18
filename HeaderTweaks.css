@@ -1,0 +1,21 @@
+/* Make draggable icon a bit viewable */
+.view-header-icon {
+    opacity: 0.1;
+}
+
+/* Make DocFileTitle more subtle */
+.view-header-title {
+    font-weight: 600;
+    opacity: 0.3;
+    font-size: calc(var(--title-size) * 0.7);
+    font-family: var(--font-monospace);
+}
+/* Adds .md at the end */
+.view-header-title::after {
+    content: ".md";
+}
+
+/* Make Document File Title Full Width */
+.view-header-title-container {
+    position: relative;
+}

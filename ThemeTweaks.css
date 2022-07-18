@@ -1,0 +1,31 @@
+
+/* > GLOBAL VARIABLES */
+:root{
+    /* Adds Blue Hue */
+    --base-h: 212; 
+    
+    /* A bit more saturation Blue Hue */
+    --base-s: 25%; 
+}
+
+/* > THEME VARIABLES */
+.excalidraw.theme--dark, .theme-dark, .theme-dark.minimal-default-dark, .theme-light.minimal-light-contrast .mod-left-split, .theme-light.minimal-light-contrast .titlebar, .theme-light.minimal-light-contrast .workspace-fake-target-overlay.is-in-sidebar, .theme-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed), .theme-light.minimal-light-contrast.is-mobile .workspace-drawer.mod-left, .theme-light.minimal-light-contrast.minimal-status-off .status-bar{
+    /*  */
+    --bg1: hsl( 
+        var(--base-h), 
+        var(--base-s), 
+        var(--base-l) );
+
+    /*  */
+    --bg2: hsl( 
+        var(--base-h), 
+        calc(var(--base-s) + 50%), 
+        calc(var(--base-l) - 8%) );   /* Darker Secondary Color */
+
+    /*  */
+    --bg3: hsla( 
+        var(--base-h), 
+        var(--base-s), 
+        calc(var(--base-l) + 40%), 
+        0.12 );
+}
